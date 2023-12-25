@@ -1,37 +1,43 @@
 const initRegisterArray: number[] = [
-    0xEF, 0x00, 0x32, 0x29, 0x33, 0x01, 0x34, 0x00, 0x35, 0x01, 0x36, 0x00, 0x37, 0x07, 0x38, 0x17,
-    0x39, 0x06, 0x3A, 0x12, 0x3F, 0x00, 0x40, 0x02, 0x41, 0xFF, 0x42, 0x01, 0x46, 0x2D, 0x47, 0x0F,
-    0x48, 0x3C, 0x49, 0x00, 0x4A, 0x1E, 0x4B, 0x00, 0x4C, 0x20, 0x4D, 0x00, 0x4E, 0x1A, 0x4F, 0x14,
-    0x50, 0x00, 0x51, 0x10, 0x52, 0x00, 0x5C, 0x02, 0x5D, 0x00, 0x5E, 0x10, 0x5F, 0x3F, 0x60, 0x27,
-    0x61, 0x28, 0x62, 0x00, 0x63, 0x03, 0x64, 0xF7, 0x65, 0x03, 0x66, 0xD9, 0x67, 0x03, 0x68, 0x01,
-    0x69, 0xC8, 0x6A, 0x40, 0x6D, 0x04, 0x6E, 0x00, 0x6F, 0x00, 0x70, 0x80, 0x71, 0x00, 0x72, 0x00,
-    0x73, 0x00, 0x74, 0xF0, 0x75, 0x00, 0x80, 0x42, 0x81, 0x44, 0x82, 0x04, 0x83, 0x20, 0x84, 0x20,
-    0x85, 0x00, 0x86, 0x10, 0x87, 0x00, 0x88, 0x05, 0x89, 0x18, 0x8A, 0x10, 0x8B, 0x01, 0x8C, 0x37,
-    0x8D, 0x00, 0x8E, 0xF0, 0x8F, 0x81, 0x90, 0x06, 0x91, 0x06, 0x92, 0x1E, 0x93, 0x0D, 0x94, 0x0A,
-    0x95, 0x0A, 0x96, 0x0C, 0x97, 0x05, 0x98, 0x0A, 0x99, 0x41, 0x9A, 0x14, 0x9B, 0x0A, 0x9C, 0x3F,
-    0x9D, 0x33, 0x9E, 0xAE, 0x9F, 0xF9, 0xA0, 0x48, 0xA1, 0x13, 0xA2, 0x10, 0xA3, 0x08, 0xA4, 0x30,
-    0xA5, 0x19, 0xA6, 0x10, 0xA7, 0x08, 0xA8, 0x24, 0xA9, 0x04, 0xAA, 0x1E, 0xAB, 0x1E, 0xCC, 0x19,
-    0xCD, 0x0B, 0xCE, 0x13, 0xCF, 0x64, 0xD0, 0x21, 0xD1, 0x0F, 0xD2, 0x88, 0xE0, 0x01, 0xE1, 0x04,
-    0xE2, 0x41, 0xE3, 0xD6, 0xE4, 0x00, 0xE5, 0x0C, 0xE6, 0x0A, 0xE7, 0x00, 0xE8, 0x00, 0xE9, 0x00,
-    0xEE, 0x07, 0xEF, 0x01, 0x00, 0x1E, 0x01, 0x1E, 0x02, 0x0F, 0x03, 0x10, 0x04, 0x02, 0x05, 0x00,
-    0x06, 0xB0, 0x07, 0x04, 0x08, 0x0D, 0x09, 0x0E, 0x0A, 0x9C, 0x0B, 0x04, 0x0C, 0x05, 0x0D, 0x0F,
-    0x0E, 0x02, 0x0F, 0x12, 0x10, 0x02, 0x11, 0x02, 0x12, 0x00, 0x13, 0x01, 0x14, 0x05, 0x15, 0x07,
-    0x16, 0x05, 0x17, 0x07, 0x18, 0x01, 0x19, 0x04, 0x1A, 0x05, 0x1B, 0x0C, 0x1C, 0x2A, 0x1D, 0x01,
-    0x1E, 0x00, 0x21, 0x00, 0x22, 0x00, 0x23, 0x00, 0x25, 0x01, 0x26, 0x00, 0x27, 0x39, 0x28, 0x7F,
-    0x29, 0x08, 0x30, 0x03, 0x31, 0x00, 0x32, 0x1A, 0x33, 0x1A, 0x34, 0x07, 0x35, 0x07, 0x36, 0x01,
-    0x37, 0xFF, 0x38, 0x36, 0x39, 0x07, 0x3A, 0x00, 0x3E, 0xFF, 0x3F, 0x00, 0x40, 0x77, 0x41, 0x40,
-    0x42, 0x00, 0x43, 0x30, 0x44, 0xA0, 0x45, 0x5C, 0x46, 0x00, 0x47, 0x00, 0x48, 0x58, 0x4A, 0x1E,
-    0x4B, 0x1E, 0x4C, 0x00, 0x4D, 0x00, 0x4E, 0xA0, 0x4F, 0x80, 0x50, 0x00, 0x51, 0x00, 0x52, 0x00,
-    0x53, 0x00, 0x54, 0x00, 0x57, 0x80, 0x59, 0x10, 0x5A, 0x08, 0x5B, 0x94, 0x5C, 0xE8, 0x5D, 0x08,
-    0x5E, 0x3D, 0x5F, 0x99, 0x60, 0x45, 0x61, 0x40, 0x63, 0x2D, 0x64, 0x02, 0x65, 0x96, 0x66, 0x00,
-    0x67, 0x97, 0x68, 0x01, 0x69, 0xCD, 0x6A, 0x01, 0x6B, 0xB0, 0x6C, 0x04, 0x6D, 0x2C, 0x6E, 0x01,
-    0x6F, 0x32, 0x71, 0x00, 0x72, 0x01, 0x73, 0x35, 0x74, 0x00, 0x75, 0x33, 0x76, 0x31, 0x77, 0x01,
-    0x7C, 0x84, 0x7D, 0x03, 0x7E, 0x01
+    0xef, 0x00, 0x32, 0x29, 0x33, 0x01, 0x34, 0x00, 0x35, 0x01, 0x36, 0x00, 0x37,
+    0x07, 0x38, 0x17, 0x39, 0x06, 0x3a, 0x12, 0x3f, 0x00, 0x40, 0x02, 0x41, 0xff,
+    0x42, 0x01, 0x46, 0x2d, 0x47, 0x0f, 0x48, 0x3c, 0x49, 0x00, 0x4a, 0x1e, 0x4b,
+    0x00, 0x4c, 0x20, 0x4d, 0x00, 0x4e, 0x1a, 0x4f, 0x14, 0x50, 0x00, 0x51, 0x10,
+    0x52, 0x00, 0x5c, 0x02, 0x5d, 0x00, 0x5e, 0x10, 0x5f, 0x3f, 0x60, 0x27, 0x61,
+    0x28, 0x62, 0x00, 0x63, 0x03, 0x64, 0xf7, 0x65, 0x03, 0x66, 0xd9, 0x67, 0x03,
+    0x68, 0x01, 0x69, 0xc8, 0x6a, 0x40, 0x6d, 0x04, 0x6e, 0x00, 0x6f, 0x00, 0x70,
+    0x80, 0x71, 0x00, 0x72, 0x00, 0x73, 0x00, 0x74, 0xf0, 0x75, 0x00, 0x80, 0x42,
+    0x81, 0x44, 0x82, 0x04, 0x83, 0x20, 0x84, 0x20, 0x85, 0x00, 0x86, 0x10, 0x87,
+    0x00, 0x88, 0x05, 0x89, 0x18, 0x8a, 0x10, 0x8b, 0x01, 0x8c, 0x37, 0x8d, 0x00,
+    0x8e, 0xf0, 0x8f, 0x81, 0x90, 0x06, 0x91, 0x06, 0x92, 0x1e, 0x93, 0x0d, 0x94,
+    0x0a, 0x95, 0x0a, 0x96, 0x0c, 0x97, 0x05, 0x98, 0x0a, 0x99, 0x41, 0x9a, 0x14,
+    0x9b, 0x0a, 0x9c, 0x3f, 0x9d, 0x33, 0x9e, 0xae, 0x9f, 0xf9, 0xa0, 0x48, 0xa1,
+    0x13, 0xa2, 0x10, 0xa3, 0x08, 0xa4, 0x30, 0xa5, 0x19, 0xa6, 0x10, 0xa7, 0x08,
+    0xa8, 0x24, 0xa9, 0x04, 0xaa, 0x1e, 0xab, 0x1e, 0xcc, 0x19, 0xcd, 0x0b, 0xce,
+    0x13, 0xcf, 0x64, 0xd0, 0x21, 0xd1, 0x0f, 0xd2, 0x88, 0xe0, 0x01, 0xe1, 0x04,
+    0xe2, 0x41, 0xe3, 0xd6, 0xe4, 0x00, 0xe5, 0x0c, 0xe6, 0x0a, 0xe7, 0x00, 0xe8,
+    0x00, 0xe9, 0x00, 0xee, 0x07, 0xef, 0x01, 0x00, 0x1e, 0x01, 0x1e, 0x02, 0x0f,
+    0x03, 0x10, 0x04, 0x02, 0x05, 0x00, 0x06, 0xb0, 0x07, 0x04, 0x08, 0x0d, 0x09,
+    0x0e, 0x0a, 0x9c, 0x0b, 0x04, 0x0c, 0x05, 0x0d, 0x0f, 0x0e, 0x02, 0x0f, 0x12,
+    0x10, 0x02, 0x11, 0x02, 0x12, 0x00, 0x13, 0x01, 0x14, 0x05, 0x15, 0x07, 0x16,
+    0x05, 0x17, 0x07, 0x18, 0x01, 0x19, 0x04, 0x1a, 0x05, 0x1b, 0x0c, 0x1c, 0x2a,
+    0x1d, 0x01, 0x1e, 0x00, 0x21, 0x00, 0x22, 0x00, 0x23, 0x00, 0x25, 0x01, 0x26,
+    0x00, 0x27, 0x39, 0x28, 0x7f, 0x29, 0x08, 0x30, 0x03, 0x31, 0x00, 0x32, 0x1a,
+    0x33, 0x1a, 0x34, 0x07, 0x35, 0x07, 0x36, 0x01, 0x37, 0xff, 0x38, 0x36, 0x39,
+    0x07, 0x3a, 0x00, 0x3e, 0xff, 0x3f, 0x00, 0x40, 0x77, 0x41, 0x40, 0x42, 0x00,
+    0x43, 0x30, 0x44, 0xa0, 0x45, 0x5c, 0x46, 0x00, 0x47, 0x00, 0x48, 0x58, 0x4a,
+    0x1e, 0x4b, 0x1e, 0x4c, 0x00, 0x4d, 0x00, 0x4e, 0xa0, 0x4f, 0x80, 0x50, 0x00,
+    0x51, 0x00, 0x52, 0x00, 0x53, 0x00, 0x54, 0x00, 0x57, 0x80, 0x59, 0x10, 0x5a,
+    0x08, 0x5b, 0x94, 0x5c, 0xe8, 0x5d, 0x08, 0x5e, 0x3d, 0x5f, 0x99, 0x60, 0x45,
+    0x61, 0x40, 0x63, 0x2d, 0x64, 0x02, 0x65, 0x96, 0x66, 0x00, 0x67, 0x97, 0x68,
+    0x01, 0x69, 0xcd, 0x6a, 0x01, 0x6b, 0xb0, 0x6c, 0x04, 0x6d, 0x2c, 0x6e, 0x01,
+    0x6f, 0x32, 0x71, 0x00, 0x72, 0x01, 0x73, 0x35, 0x74, 0x00, 0x75, 0x33, 0x76,
+    0x31, 0x77, 0x01, 0x7c, 0x84, 0x7d, 0x03, 0x7e, 0x01,
 ];
 
-let TubeTab: number [] = [
-    0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07,
-    0x7f, 0x6f, 0x77, 0x7c, 0x39, 0x5e, 0x79, 0x71
+let TubeTab: number[] = [
+    0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f, 0x77, 0x7c, 0x39,
+    0x5e, 0x79, 0x71,
 ];
 
 /**
@@ -57,7 +63,7 @@ enum GroveGesture {
     //% block=Anticlockwise
     Anticlockwise = 8,
     //% block=Wave
-    Wave = 9
+    Wave = 9,
 }
 
 enum GroveJoystickKey {
@@ -80,9 +86,8 @@ enum GroveJoystickKey {
     //% block="Lower right"
     LR = 8,
     //% block="press"
-    Press = 9
+    Press = 9,
 }
-
 
 /**
  * Functions to operate Grove module.
@@ -91,8 +96,8 @@ enum GroveJoystickKey {
 //% groups='["4-Digit","Ultrasonic","Gesture","Thumbjoystick","UartWiFi"]'
 namespace grove {
     /**
-     * 
-     */
+    *
+    */
     export class PAJ7620 {
         private paj7620WriteReg(addr: number, cmd: number) {
             let buf: Buffer = pins.createBuffer(2);
@@ -116,8 +121,8 @@ namespace grove {
         }
 
         private paj7620SelectBank(bank: number) {
-            if (bank == 0) this.paj7620WriteReg(0xEF, 0);
-            else if (bank == 1) this.paj7620WriteReg(0xEF, 1);
+            if (bank == 0) this.paj7620WriteReg(0xef, 0);
+            else if (bank == 1) this.paj7620WriteReg(0xef, 1);
         }
 
         private paj7620Init() {
@@ -148,108 +153,102 @@ namespace grove {
          */
 
         read(): number {
-            let data = 0, result = 0;
+            let data = 0,
+                result = 0;
 
             data = this.paj7620ReadReg(0x43);
             switch (data) {
                 case 0x01:
                     result = GroveGesture.Right;
-                break;
+                    break;
 
                 case 0x02:
                     result = GroveGesture.Left;
-                break;
+                    break;
 
                 case 0x04:
                     result = GroveGesture.Up;
-                break;
+                    break;
 
                 case 0x08:
                     result = GroveGesture.Down;
-                break;
+                    break;
 
                 case 0x10:
                     result = GroveGesture.Forward;
-                break;
+                    break;
 
                 case 0x20:
                     result = GroveGesture.Backward;
-                break;
+                    break;
 
                 case 0x40:
                     result = GroveGesture.Clockwise;
-                break;
+                    break;
 
                 case 0x80:
                     result = GroveGesture.Anticlockwise;
-                break;
+                    break;
 
                 default:
                     data = this.paj7620ReadReg(0x44);
-                    if (data == 0x01)
-                        result = GroveGesture.Wave;
-                break;
+                    if (data == 0x01) result = GroveGesture.Wave;
+                    break;
             }
 
             return result;
         }
     }
-    
+
     /**
-     * 
-     */
-    export class TM1637
-    {
+       *
+       */
+    export class TM1637 {
         clkPin: DigitalPin;
         dataPin: DigitalPin;
-        brightnessLevel: number;     
+        brightnessLevel: number;
         pointFlag: boolean;
         buf: Buffer;
 
-        private writeByte(wrData: number) 
-        {
-            for(let i = 0; i < 8; i ++)
-            {
+        private writeByte(wrData: number) {
+            for (let i = 0; i < 8; i++) {
                 pins.digitalWritePin(this.clkPin, 0);
-                if(wrData & 0x01)pins.digitalWritePin(this.dataPin, 1);
+                if (wrData & 0x01) pins.digitalWritePin(this.dataPin, 1);
                 else pins.digitalWritePin(this.dataPin, 0);
                 wrData >>= 1;
                 pins.digitalWritePin(this.clkPin, 1);
             }
-            
+
             pins.digitalWritePin(this.clkPin, 0); // Wait for ACK
             pins.digitalWritePin(this.dataPin, 1);
             pins.digitalWritePin(this.clkPin, 1);
         }
-        
-        private start()
-        {
+
+        private start() {
             pins.digitalWritePin(this.clkPin, 1);
             pins.digitalWritePin(this.dataPin, 1);
             pins.digitalWritePin(this.dataPin, 0);
             pins.digitalWritePin(this.clkPin, 0);
         }
-        
-        private stop()
-        {
+
+        private stop() {
             pins.digitalWritePin(this.clkPin, 0);
             pins.digitalWritePin(this.dataPin, 0);
             pins.digitalWritePin(this.clkPin, 1);
             pins.digitalWritePin(this.dataPin, 1);
         }
-        
-        private coding(dispData: number): number
-        {
+
+        private coding(dispData: number): number {
             let pointData = 0;
-            
-            if(this.pointFlag == true)pointData = 0x80;
-            else if(this.pointFlag == false)pointData = 0;
-            
-            if(dispData == 0x7f)dispData = 0x00 + pointData;
+
+            if (this.pointFlag == true) pointData = 0x80;
+            else if (this.pointFlag == false) pointData = 0;
+
+            if (dispData == 0x7f) dispData = 0x00 + pointData;
             else dispData = TubeTab[dispData] + pointData;
-            
+
             return dispData;
-        } 
+        }
 
         /**
          * Show a 4 digits number on display
@@ -258,73 +257,63 @@ namespace grove {
 
         //% blockId=grove_tm1637_display_number block="%4Digit|show number|%dispData"
         //% group="4-Digit"
-        show(dispData: number)
-        {       
-            let compare_01:number = dispData % 100;
-            let compare_001:number = dispData % 1000;
+        show(dispData: number) {
+            let compare_01: number = dispData % 100;
+            let compare_001: number = dispData % 1000;
 
-            if(dispData < 10)
-            {
+            if (dispData < 10) {
                 this.bit(dispData, 3);
                 this.bit(0x7f, 2);
                 this.bit(0x7f, 1);
-                this.bit(0x7f, 0);                
-            }
-            else if(dispData < 100)
-            {
+                this.bit(0x7f, 0);
+            } else if (dispData < 100) {
                 this.bit(dispData % 10, 3);
-                if(dispData > 90){
+                if (dispData > 90) {
                     this.bit(9, 2);
-                } else{
+                } else {
                     this.bit(Math.floor(dispData / 10) % 10, 2);
                 }
-                
+
                 this.bit(0x7f, 1);
                 this.bit(0x7f, 0);
-            }
-            else if(dispData < 1000)
-            {
+            } else if (dispData < 1000) {
                 this.bit(dispData % 10, 3);
-                if(compare_01 > 90){
+                if (compare_01 > 90) {
                     this.bit(9, 2);
-                } else{
+                } else {
                     this.bit(Math.floor(dispData / 10) % 10, 2);
                 }
-                if(compare_001 > 900){
+                if (compare_001 > 900) {
                     this.bit(9, 1);
-                } else{
+                } else {
                     this.bit(Math.floor(dispData / 100) % 10, 1);
                 }
                 this.bit(0x7f, 0);
-            }
-            else if(dispData < 10000)
-            {
+            } else if (dispData < 10000) {
                 this.bit(dispData % 10, 3);
-                if(compare_01 > 90){
+                if (compare_01 > 90) {
                     this.bit(9, 2);
-                } else{
+                } else {
                     this.bit(Math.floor(dispData / 10) % 10, 2);
                 }
-                if(compare_001 > 900){
+                if (compare_001 > 900) {
                     this.bit(9, 1);
-                } else{
+                } else {
                     this.bit(Math.floor(dispData / 100) % 10, 1);
                 }
-                if(dispData > 9000){
+                if (dispData > 9000) {
                     this.bit(9, 0);
-                } else{
+                } else {
                     this.bit(Math.floor(dispData / 1000) % 10, 0);
                 }
-            }
-            else 
-            {
+            } else {
                 this.bit(9, 3);
                 this.bit(9, 2);
                 this.bit(9, 1);
                 this.bit(9, 0);
             }
         }
-        
+
         /**
          * Set the brightness level of display at from 0 to 7
          * @param level value of brightness light level
@@ -332,16 +321,15 @@ namespace grove {
         //% blockId=grove_tm1637_set_display_level block="%4Digit|brightness level to|%level"
         //% level.min=0 level.max=7
         //% group="4-Digit"
-        set(level: number)
-        {
+        set(level: number) {
             this.brightnessLevel = level;
-            
+
             this.bit(this.buf[0], 0x00);
             this.bit(this.buf[1], 0x01);
             this.bit(this.buf[2], 0x02);
             this.bit(this.buf[3], 0x03);
         }
-        
+
         /**
          * Show a single number from 0 to 9 at a specified digit of Grove - 4-Digit Display
          * @param dispData value of number
@@ -351,12 +339,10 @@ namespace grove {
         //% dispData.min=0 dispData.max=9
         //% bitAddr.min=0 bitAddr.max=3
         //% group="4-Digit"
-        bit(dispData: number, bitAddr: number)
-        {
-            if((dispData == 0x7f) || ((dispData <= 9) && (bitAddr <= 3)))
-            {
+        bit(dispData: number, bitAddr: number) {
+            if (dispData == 0x7f || (dispData <= 9 && bitAddr <= 3)) {
                 let segData = 0;
-                
+
                 segData = this.coding(dispData);
                 this.start();
                 this.writeByte(0x44);
@@ -368,34 +354,32 @@ namespace grove {
                 this.start();
                 this.writeByte(0x88 + this.brightnessLevel);
                 this.stop();
-                
+
                 this.buf[bitAddr] = dispData;
             }
         }
-        
+
         /**
          * Turn on or off the colon point on Grove - 4-Digit Display
          * @param pointEn value of point switch
          */
         //% blockId=grove_tm1637_display_point block="%4Digit|turn|%point|colon point"
         //% group="4-Digit"
-        point(point: boolean)
-        {
+        point(point: boolean) {
             this.pointFlag = point;
-            
+
             this.bit(this.buf[0], 0x00);
             this.bit(this.buf[1], 0x01);
             this.bit(this.buf[2], 0x02);
             this.bit(this.buf[3], 0x03);
         }
-        
+
         /**
          * Clear the display
          */
         //% blockId=grove_tm1637_display_clear block="%4Digit|clear"
         //% group="4-Digit"
-        clear()
-        {
+        clear() {
             this.bit(0x7f, 0x00);
             this.bit(0x7f, 0x01);
             this.bit(0x7f, 0x02);
@@ -403,47 +387,42 @@ namespace grove {
         }
     }
 
-
-    export class GroveJoystick
-    {
+    export class GroveJoystick {
         /**
          * Detect position from Grove - Thumb Joystick
          * @param xPin
          * @param yPin
          */
-     
-        joyread(xPin: AnalogPin, yPin: AnalogPin): number {
 
-            let xdata = 0, ydata = 0, result = 0;
+        joyread(xPin: AnalogPin, yPin: AnalogPin): number {
+            let xdata = 0,
+                ydata = 0,
+                result = 0;
             if (xPin && yPin) {
                 xdata = pins.analogReadPin(xPin);
                 ydata = pins.analogReadPin(yPin);
                 if (xdata > 1000) {
                     result = GroveJoystickKey.Press;
-                }
-                else if (xdata > 600) {
+                } else if (xdata > 600) {
                     if (ydata > 600) result = GroveJoystickKey.UR;
                     else if (ydata < 400) result = GroveJoystickKey.LR;
                     else result = GroveJoystickKey.Right;
-                }
-                else if (xdata < 400) {
+                } else if (xdata < 400) {
                     if (ydata > 600) result = GroveJoystickKey.UL;
                     else if (ydata < 400) result = GroveJoystickKey.LL;
                     else result = GroveJoystickKey.Left;
-                }
-                else {
+                } else {
                     if (ydata > 600) result = GroveJoystickKey.Up;
                     else if (ydata < 400) result = GroveJoystickKey.Down;
                     else result = GroveJoystickKey.None;
                 }
-            }
-            else {
-                result =  GroveJoystickKey.None;
+            } else {
+                result = GroveJoystickKey.None;
             }
             return result;
         }
     }
-    
+
     const gestureEventId = 3100;
     const joystickEventID = 3101;
     let lastGesture = GroveGesture.None;
@@ -452,99 +431,96 @@ namespace grove {
     let joystick = new GroveJoystick();
     let paj7620 = new PAJ7620();
     // adapted to Calliope mini V2 Core by M.Klein 17.09.2020
-    
+
     /**
-     * Create a new driver of Grove - Ultrasonic Sensor to measure distances in cm
-     * @param pin signal pin of ultrasonic ranger module
-     */
+       * Create a new driver of Grove - Ultrasonic Sensor to measure distances in cm
+       * @param pin signal pin of ultrasonic ranger module
+       */
     //% blockId=grove_ultrasonic_centimeters_v2 block="(V2)Ultrasonic Sensor (in cm) at|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4
     //% pin.fieldOptions.tooltips="false" pin.fieldOptions.width="250"
     //% group="Ultrasonic" pin.defl=DigitalPin.C16
 
-    export function measureInCentimetersV2(pin: DigitalPin): number
-    {
+    export function measureInCentimetersV2(pin: DigitalPin): number {
         let duration = 0;
         let RangeInCentimeters = 0;
-        
+
         pins.digitalWritePin(pin, 0);
         control.waitMicros(2);
         pins.digitalWritePin(pin, 1);
         control.waitMicros(20);
-        pins.digitalWritePin(pin, 0);        
+        pins.digitalWritePin(pin, 0);
         duration = pins.pulseIn(pin, PulseValue.High, 50000); // Max duration 50 ms
 
-        RangeInCentimeters = duration * 153 / 44 / 2 / 100 ;
-               
-        if(RangeInCentimeters > 0) distanceBackup = RangeInCentimeters;
+        RangeInCentimeters = (duration * 153) / 44 / 2 / 100;
+
+        if (RangeInCentimeters > 0) distanceBackup = RangeInCentimeters;
         else RangeInCentimeters = distanceBackup;
 
         basic.pause(50);
-        
+
         return RangeInCentimeters;
     }
-    
-     /**
-     * Create a new driver Grove - Ultrasonic Sensor to measure distances in inch
-     * @param pin signal pin of ultrasonic ranger module
-     */
+
+    /**
+       * Create a new driver Grove - Ultrasonic Sensor to measure distances in inch
+       * @param pin signal pin of ultrasonic ranger module
+       */
     //% blockId=grove_ultrasonic_inches_v2 block="(V2)Ultrasonic Sensor (in inch) at|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4
     //% pin.fieldOptions.tooltips="false" pin.fieldOptions.width="250"
     //% group="Ultrasonic" pin.defl=DigitalPin.C16
-    export function measureInInchesV2(pin: DigitalPin): number
-    {
+    export function measureInInchesV2(pin: DigitalPin): number {
         let duration = 0;
         let RangeInInches = 0;
-        
+
         pins.digitalWritePin(pin, 0);
         control.waitMicros(2);
         pins.digitalWritePin(pin, 1);
         control.waitMicros(20);
         pins.digitalWritePin(pin, 0);
         duration = pins.pulseIn(pin, PulseValue.High, 100000); // Max duration 100 ms
-        
-        RangeInInches = duration * 153 / 113 / 2 / 100;
-        
-        if(RangeInInches > 0) distanceBackup = RangeInInches;
+
+        RangeInInches = (duration * 153) / 113 / 2 / 100;
+
+        if (RangeInInches > 0) distanceBackup = RangeInInches;
         else RangeInInches = distanceBackup;
-        
+
         basic.pause(50);
-        
+
         return RangeInInches;
     }
-    
+
     /**
-     * Create a new driver of Grove - Ultrasonic Sensor to measure distances in cm
-     * @param pin signal pin of ultrasonic ranger module
-     */
+       * Create a new driver of Grove - Ultrasonic Sensor to measure distances in cm
+       * @param pin signal pin of ultrasonic ranger module
+       */
     //% blockId=grove_ultrasonic_centimeters block="Ultrasonic Sensor (in cm) at|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4
     //% pin.fieldOptions.tooltips="false" pin.fieldOptions.width="250"
     //% group="Ultrasonic" pin.defl=DigitalPin.C16
 
-    export function measureInCentimeters(pin: DigitalPin): number
-    {
+    export function measureInCentimeters(pin: DigitalPin): number {
         let duration = 0;
         let RangeInCentimeters = 0;
-        
+
         pins.digitalWritePin(pin, 0);
         control.waitMicros(2);
         pins.digitalWritePin(pin, 1);
         control.waitMicros(20);
-        pins.digitalWritePin(pin, 0);        
+        pins.digitalWritePin(pin, 0);
         duration = pins.pulseIn(pin, PulseValue.High, 50000); // Max duration 50 ms
 
-        RangeInCentimeters = duration * 153 / 29 / 2 / 100;
-               
-        if(RangeInCentimeters > 0) distanceBackup = RangeInCentimeters;
+        RangeInCentimeters = (duration * 153) / 29 / 2 / 100;
+
+        if (RangeInCentimeters > 0) distanceBackup = RangeInCentimeters;
         else RangeInCentimeters = distanceBackup;
 
         basic.pause(50);
-        
+
         return RangeInCentimeters;
     }
-    
+
     /**
      * Create a new driver Grove - Ultrasonic Sensor to measure distances in inch
      * @param pin signal pin of ultrasonic ranger module
@@ -553,28 +529,27 @@ namespace grove {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4
     //% pin.fieldOptions.tooltips="false" pin.fieldOptions.width="250"
     //% group="Ultrasonic" pin.defl=DigitalPin.C16
-    export function measureInInches(pin: DigitalPin): number
-    {
+    export function measureInInches(pin: DigitalPin): number {
         let duration = 0;
         let RangeInInches = 0;
-        
+
         pins.digitalWritePin(pin, 0);
         control.waitMicros(2);
         pins.digitalWritePin(pin, 1);
         control.waitMicros(20);
-        pins.digitalWritePin(pin, 0);        
+        pins.digitalWritePin(pin, 0);
         duration = pins.pulseIn(pin, PulseValue.High, 100000); // Max duration 100 ms
-        
-        RangeInInches = duration * 153 / 74 / 2 / 100;
-        
-        if(RangeInInches > 0) distanceBackup = RangeInInches;
+
+        RangeInInches = (duration * 153) / 74 / 2 / 100;
+
+        if (RangeInInches > 0) distanceBackup = RangeInInches;
         else RangeInInches = distanceBackup;
-        
+
         basic.pause(50);
-        
+
         return RangeInInches;
     }
-    
+
     /**
      * Create a new driver Grove - 4-Digit Display
      * @param clkPin value of clk pin number
@@ -588,23 +563,25 @@ namespace grove {
     //% clkPin.defl=DigitalPin.C16 dataPin.defl=DigitalPin.C17
     //% dataPin.fieldOptions.tooltips="false" dataPin.fieldOptions.width="250"
     //% blockSetVariable=4digit
-    export function createDisplay(clkPin: DigitalPin, dataPin: DigitalPin): TM1637
-    {
+    export function createDisplay(
+        clkPin: DigitalPin,
+        dataPin: DigitalPin
+    ): TM1637 {
         let display = new TM1637();
-        
+
         display.buf = pins.createBuffer(4);
         display.clkPin = clkPin;
         display.dataPin = dataPin;
         display.brightnessLevel = 0;
         display.pointFlag = false;
         display.clear();
-        
+
         return display;
     }
- 
+
     /**
      * init Grove Gesture modules
-     * 
+     *
      */
     //% blockId=grove_initgesture block="init gesture"
     //% group="Gesture"
@@ -616,7 +593,7 @@ namespace grove {
 
     /**
      * get Grove Gesture model
-     * 
+     *
      */
     //% blockId=grove_getgesture block="get gesture model"
     //% group="Gesture"
@@ -625,7 +602,7 @@ namespace grove {
     }
     /**
      * get Joystick key
-     * 
+     *
      */
     //% blockId=grove_getjoystick block="get joystick key at|%xpin|and|%ypin"
     //% group="Thumbjoystick" xpin.defl=AnalogPin.C16 ypin.defl=AnalogPin.C17
@@ -633,7 +610,7 @@ namespace grove {
         return joystick.joyread(xpin, ypin);
     }
 
-   /**
+    /**
      * Converts the gesture name to a number
      * Useful for comparisons
      */
@@ -642,7 +619,7 @@ namespace grove {
     export function ggesture(g: GroveGesture): number {
         return g;
     }
-    
+
     /**
      * Do something when a gesture is detected by Grove - Gesture
      * @param gesture type of gesture to detect
@@ -654,7 +631,7 @@ namespace grove {
         control.onEvent(gestureEventId, gesture, handler);
         paj7620.init();
         control.inBackground(() => {
-            while(true) {
+            while (true) {
                 const gesture = paj7620.read();
                 if (gesture != lastGesture) {
                     lastGesture = gesture;
@@ -662,7 +639,7 @@ namespace grove {
                 }
                 basic.pause(50);
             }
-        })
+        });
     }
 
     /**
@@ -685,19 +662,23 @@ namespace grove {
     //% blockId=grove_joystick_create_event block="on Key|%key at |%xpin|and|%ypin"
     //% group="Thumbjoystick" xpin.defl=AnalogPin.C16 ypin.defl=AnalogPin.C17
 
-    export function onJoystick(key: GroveJoystickKey, xpin: AnalogPin, ypin: AnalogPin, handler: () => void) {
+    export function onJoystick(
+        key: GroveJoystickKey,
+        xpin: AnalogPin,
+        ypin: AnalogPin,
+        handler: () => void
+    ) {
         control.onEvent(joystickEventID, key, handler);
         control.inBackground(() => {
-            while(true) {
+            while (true) {
                 const key = joystick.joyread(xpin, ypin);
                 if (key != lastJoystick) {
-                    lastJoystick = key; 
+                    lastJoystick = key;
                     control.raiseEvent(joystickEventID, lastJoystick);
                 }
                 basic.pause(50);
             }
-        })
-        
+        });
     }
 
     let isWifiConnected = false;
@@ -709,28 +690,30 @@ namespace grove {
     //% txPin.defl=SerialPin.P15
     //% rxPin.defl=SerialPin.P1
     //% baudRate.defl=BaudRate.BaudRate115200
-    export function setupWifi(txPin: SerialPin, rxPin: SerialPin, baudRate: BaudRate, ssid: string, passwd: string) {
-        let result = 0
+    export function setupWifi(
+        txPin: SerialPin,
+        rxPin: SerialPin,
+        baudRate: BaudRate,
+        ssid: string,
+        passwd: string
+    ) {
+        let result = 0;
 
-        isWifiConnected = false
+        isWifiConnected = false;
 
-        serial.redirect(
-            txPin,
-            rxPin,
-            baudRate
-        )
+        serial.redirect(txPin, rxPin, baudRate);
 
-        sendAtCmd("AT")
-        result = waitAtResponse("OK", "ERROR", "None", 1000)
+        sendAtCmd("AT");
+        result = waitAtResponse("OK", "ERROR", "None", 1000);
 
-        sendAtCmd("AT+CWMODE=1")
-        result = waitAtResponse("OK", "ERROR", "None", 1000)
+        sendAtCmd("AT+CWMODE=1");
+        result = waitAtResponse("OK", "ERROR", "None", 1000);
 
-        sendAtCmd(`AT+CWJAP="${ssid}","${passwd}"`)
-        result = waitAtResponse("WIFI GOT IP", "ERROR", "None", 20000)
+        sendAtCmd(`AT+CWJAP="${ssid}","${passwd}"`);
+        result = waitAtResponse("WIFI GOT IP", "ERROR", "None", 20000);
 
         if (result == 1) {
-            isWifiConnected = true
+            isWifiConnected = true;
         }
     }
 
@@ -740,7 +723,7 @@ namespace grove {
     //% block="Wifi OK?"
     //% group="UartWiFi"
     export function wifiOK() {
-        return isWifiConnected
+        return isWifiConnected;
     }
 
     /**
@@ -749,44 +732,107 @@ namespace grove {
     //% block="Send Data to your ThinkSpeak Channel|Write API Key %apiKey|Field1 %field1|Field2 %field2|Field3 %field3|Field4 %field4|Field5 %field5|Field6 %field6|Field7 %field7|Field8 %field8"
     //% group="UartWiFi"
     //% apiKey.defl="your Write API Key"
-    export function sendToThinkSpeak(apiKey: string, field1: number, field2: number, field3: number, field4: number, field5: number, field6: number, field7: number, field8: number) {
-        let result = 0
-        let retry = 2
+    export function sendToThinkSpeak(
+        apiKey: string,
+        field1: number,
+        field2: number,
+        field3: number,
+        field4: number,
+        field5: number,
+        field6: number,
+        field7: number,
+        field8: number
+    ) {
+        let result = 0;
+        let retry = 2;
 
         // close the previous TCP connection
         if (isWifiConnected) {
-            sendAtCmd("AT+CIPCLOSE")
-            waitAtResponse("OK", "ERROR", "None", 2000)
+            sendAtCmd("AT+CIPCLOSE");
+            waitAtResponse("OK", "ERROR", "None", 2000);
         }
 
         while (isWifiConnected && retry > 0) {
             retry = retry - 1;
             // establish TCP connection
-            sendAtCmd("AT+CIPSTART=\"TCP\",\"api.thingspeak.com\",80")
-            result = waitAtResponse("OK", "ALREADY CONNECTED", "ERROR", 2000)
-            if (result == 3) continue
+            sendAtCmd('AT+CIPSTART="TCP","api.thingspeak.com",80');
+            result = waitAtResponse("OK", "ALREADY CONNECTED", "ERROR", 2000);
+            if (result == 3) continue;
 
-            let data = "GET /update?api_key=" + apiKey
-            if (!isNaN(field1)) data = data + "&field1=" + field1
-            if (!isNaN(field2)) data = data + "&field2=" + field2
-            if (!isNaN(field3)) data = data + "&field3=" + field3
-            if (!isNaN(field4)) data = data + "&field4=" + field4
-            if (!isNaN(field5)) data = data + "&field5=" + field5
-            if (!isNaN(field6)) data = data + "&field6=" + field6
-            if (!isNaN(field7)) data = data + "&field7=" + field7
-            if (!isNaN(field8)) data = data + "&field8=" + field8
+            let data = "GET /update?api_key=" + apiKey;
+            if (!isNaN(field1)) data = data + "&field1=" + field1;
+            if (!isNaN(field2)) data = data + "&field2=" + field2;
+            if (!isNaN(field3)) data = data + "&field3=" + field3;
+            if (!isNaN(field4)) data = data + "&field4=" + field4;
+            if (!isNaN(field5)) data = data + "&field5=" + field5;
+            if (!isNaN(field6)) data = data + "&field6=" + field6;
+            if (!isNaN(field7)) data = data + "&field7=" + field7;
+            if (!isNaN(field8)) data = data + "&field8=" + field8;
 
-            sendAtCmd("AT+CIPSEND=" + (data.length + 2))
-            result = waitAtResponse(">", "OK", "ERROR", 2000)
-            if (result == 3) continue
-            sendAtCmd(data)
-            result = waitAtResponse("SEND OK", "SEND FAIL", "ERROR", 5000)
+            sendAtCmd("AT+CIPSEND=" + (data.length + 2));
+            result = waitAtResponse(">", "OK", "ERROR", 2000);
+            if (result == 3) continue;
+            sendAtCmd(data);
+            result = waitAtResponse("SEND OK", "SEND FAIL", "ERROR", 5000);
 
             // // close the TCP connection
             // sendAtCmd("AT+CIPCLOSE")
             // waitAtResponse("OK", "ERROR", "None", 2000)
 
-            if (result == 1) break
+            if (result == 1) break;
+        }
+    }
+
+    export function sendToCustomServer(
+        website: string,
+        port: number,
+        url: string,
+        field1: number,
+        field2: number,
+        field3: number,
+        field4: number,
+        field5: number,
+        field6: number,
+        field7: number,
+        field8: number
+    ) {
+        let result = 0;
+        let retry = 2;
+
+        // close the previous TCP connection
+        if (isWifiConnected) {
+            sendAtCmd("AT+CIPCLOSE");
+            waitAtResponse("OK", "ERROR", "None", 2000);
+        }
+
+        while (isWifiConnected && retry > 0) {
+            retry = retry - 1;
+            // establish TCP connection
+            sendAtCmd(`AT+CIPSTART="TCP",${website},${port}`);
+            result = waitAtResponse("OK", "ALREADY CONNECTED", "ERROR", 2000);
+            if (result == 3) continue;
+
+            let data = `GET ${url}`;
+            if (!isNaN(field1)) data = data + "&field1=" + field1;
+            if (!isNaN(field2)) data = data + "&field2=" + field2;
+            if (!isNaN(field3)) data = data + "&field3=" + field3;
+            if (!isNaN(field4)) data = data + "&field4=" + field4;
+            if (!isNaN(field5)) data = data + "&field5=" + field5;
+            if (!isNaN(field6)) data = data + "&field6=" + field6;
+            if (!isNaN(field7)) data = data + "&field7=" + field7;
+            if (!isNaN(field8)) data = data + "&field8=" + field8;
+
+            sendAtCmd("AT+CIPSEND=" + (data.length + 2));
+            result = waitAtResponse(">", "OK", "ERROR", 2000);
+            if (result == 3) continue;
+            sendAtCmd(data);
+            result = waitAtResponse("SEND OK", "SEND FAIL", "ERROR", 5000);
+
+            // // close the TCP connection
+            // sendAtCmd("AT+CIPCLOSE")
+            // waitAtResponse("OK", "ERROR", "None", 2000)
+
+            if (result == 1) break;
         }
     }
 
@@ -800,69 +846,79 @@ namespace grove {
     //% value1.defl="hello"
     //% value2.defl="micro"
     //% value3.defl="bit"
-    export function sendToIFTTT(event: string, key: string, value1: string, value2: string, value3: string) {
-        let result = 0
-        let retry = 2
+    export function sendToIFTTT(
+        event: string,
+        key: string,
+        value1: string,
+        value2: string,
+        value3: string
+    ) {
+        let result = 0;
+        let retry = 2;
 
         // close the previous TCP connection
         if (isWifiConnected) {
-            sendAtCmd("AT+CIPCLOSE")
-            waitAtResponse("OK", "ERROR", "None", 2000)
+            sendAtCmd("AT+CIPCLOSE");
+            waitAtResponse("OK", "ERROR", "None", 2000);
         }
 
         while (isWifiConnected && retry > 0) {
             retry = retry - 1;
             // establish TCP connection
-            sendAtCmd("AT+CIPSTART=\"TCP\",\"maker.ifttt.com\",80")
-            result = waitAtResponse("OK", "ALREADY CONNECTED", "ERROR", 2000)
-            if (result == 3) continue
+            sendAtCmd('AT+CIPSTART="TCP","maker.ifttt.com",80');
+            result = waitAtResponse("OK", "ALREADY CONNECTED", "ERROR", 2000);
+            if (result == 3) continue;
 
-            let data = "GET /trigger/" + event + "/with/key/" + key
-            data = data + "?value1=" + value1
-            data = data + "&value2=" + value2
-            data = data + "&value3=" + value3
-            data = data + " HTTP/1.1"
-            data = data + "\u000D\u000A"
-            data = data + "User-Agent: curl/7.58.0"
-            data = data + "\u000D\u000A"
-            data = data + "Host: maker.ifttt.com"
-            data = data + "\u000D\u000A"
-            data = data + "Accept: */*"
-            data = data + "\u000D\u000A"
+            let data = "GET /trigger/" + event + "/with/key/" + key;
+            data = data + "?value1=" + value1;
+            data = data + "&value2=" + value2;
+            data = data + "&value3=" + value3;
+            data = data + " HTTP/1.1";
+            data = data + "\u000D\u000A";
+            data = data + "User-Agent: curl/7.58.0";
+            data = data + "\u000D\u000A";
+            data = data + "Host: maker.ifttt.com";
+            data = data + "\u000D\u000A";
+            data = data + "Accept: */*";
+            data = data + "\u000D\u000A";
 
-            sendAtCmd("AT+CIPSEND=" + (data.length + 2))
-            result = waitAtResponse(">", "OK", "ERROR", 2000)
-            if (result == 3) continue
-            sendAtCmd(data)
-            result = waitAtResponse("SEND OK", "SEND FAIL", "ERROR", 5000)
+            sendAtCmd("AT+CIPSEND=" + (data.length + 2));
+            result = waitAtResponse(">", "OK", "ERROR", 2000);
+            if (result == 3) continue;
+            sendAtCmd(data);
+            result = waitAtResponse("SEND OK", "SEND FAIL", "ERROR", 5000);
 
             // // close the TCP connection
             // sendAtCmd("AT+CIPCLOSE")
             // waitAtResponse("OK", "ERROR", "None", 2000)
 
-            if (result == 1) break
+            if (result == 1) break;
         }
     }
 
+    function waitAtResponse(
+        target1: string,
+        target2: string,
+        target3: string,
+        timeout: number
+    ) {
+        let buffer = "";
+        let start = input.runningTime();
 
-    function waitAtResponse(target1: string, target2: string, target3: string, timeout: number) {
-        let buffer = ""
-        let start = input.runningTime()
+        while (input.runningTime() - start < timeout) {
+            buffer += serial.readString();
 
-        while ((input.runningTime() - start) < timeout) {
-            buffer += serial.readString()
+            if (buffer.includes(target1)) return 1;
+            if (buffer.includes(target2)) return 2;
+            if (buffer.includes(target3)) return 3;
 
-            if (buffer.includes(target1)) return 1
-            if (buffer.includes(target2)) return 2
-            if (buffer.includes(target3)) return 3
-
-            basic.pause(100)
+            basic.pause(100);
         }
 
-        return 0
+        return 0;
     }
 
     function sendAtCmd(cmd: string) {
-        serial.writeString(cmd + "\u000D\u000A")
+        serial.writeString(cmd + "\u000D\u000A");
     }
 }
